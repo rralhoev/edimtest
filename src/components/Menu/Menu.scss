@@ -1,0 +1,68 @@
+.menuPopup {
+  position: fixed;
+  right: -40%;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  z-index: 9;
+}
+
+.menuPopup.open {
+  right: -1px;
+}
+
+.burger svg {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    height: 30px;
+  }
+}
+
+svg:not(:root) {
+  overflow: visible;
+}
+
+.burger path.top, .burger path.bottom {
+  stroke-dasharray: 240px, 950px;
+}
+
+.burger path {
+  fill: none;
+  stroke: #000;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke-width: 40px;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+}
+
+.burger path.middle {
+  stroke-dasharray: 240px, 240px;
+}
+
+.burger path {
+  fill: none;
+  stroke: #000;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke-width: 40px;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s, stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25) 0s;
+}
+
+.burger.open path.top, .burger.open path.bottom {
+  stroke-dashoffset: -650px;
+}
+
+.burger path.top, .burger path.bottom {
+  stroke-dasharray: 240px, 950px;
+}
+
+.burger.open path.middle {
+  stroke-dasharray: 1px, 220px;
+  stroke-dashoffset: -115px;
+}
