@@ -5,7 +5,7 @@ import './Menu.scss';
 const Menu = () => {
 	const [isOpen, setIsOpen] = React.useState<boolean>(false);
 	return (
-		<nav className={'menu flex absolute top-0 right-0 md:block md:relative items-center justify-center'}>
+		<nav className={'menu flex top-0 right-0 md:block md:relative items-center justify-center'}>
 			<div onClick={() => setIsOpen(!isOpen)} className={`burger relative z-10 block md:hidden ${isOpen && 'open'}`}>
 				<BurgerMenu />
 			</div>

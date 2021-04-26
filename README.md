@@ -2,7 +2,7 @@
 
 ## Скрипты
 
-### `yarn start`
+### `yarn install`
 Для загрузки всех зависимостей
 
 ### `yarn start`

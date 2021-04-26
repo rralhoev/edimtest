@@ -49,7 +49,7 @@ const Cocktail = () => {
 
 	return (
 		<div className={'cocktail-card my-6'}>
-			<div className={'catalog-image'}>
+			<div className={'catalog-image'} style={{height: '500px'}}>
 				<img className={'object-cover'} alt={'cocktail'} src={state.strDrinkThumb} />
 			</div>
 			<h2 className={'mt-2 text-2xl font-bold'}>{state.strDrink}</h2>
@@ -68,8 +68,8 @@ const Cocktail = () => {
 					</tr>
 				</thead>
 				<tbody>
-				{ingredients && ingredients.map(item => (
-					<tr>
+				{ingredients && ingredients.map((item, index) => (
+					<tr key={index}>
 						<td className={'border border-solid border-2 py-2'}>{item.ingredient}</td>
 						<td className={'border border-solid border-2 py-2'}>{item.measure}</td>
 						<td className={'border border-solid border-2 py-2'}>Картинка ингредиента</td>
